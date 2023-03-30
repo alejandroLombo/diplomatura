@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curriculum</title>
+    <link rel="stylesheet" href="stilos.css">
+    <title>Curriculum Vitae</title>
 </head>
+
 <body>
     <div class="curriculum">
         <div class="titulo">
             <h1>Alejandro Emanuel Lombo</h1>
         </div>
-        <div class="foto">
-            <img src="../Foto/Foto cv Tarea.png" alt="">
+        <div class="conteiner">
+        <div class="foto" id="foto">
+            <img src="../../Foto/Foto cv Tarea.png" alt="">
         </div>
-        <div class="datosPersonales">
+        <div id="datosPersonales" class="datosPersonales">
             <h3>Mis Datos</h3>
             <p>Edad: 32 años</p>
             <p>Domicilio:Doroteo Robles 3965, Cordoba,Argentina</p>
             <p>Estudios: Tecnicatura Completa</p>
         </div>
-        <div class="hobbies">
+        <div class="hobbies" id="hobbies">
             <H3>Me Gustan</H3>
             <ul>
                 <li>Informatica</li>
@@ -29,7 +33,7 @@
                 <li>Viajar</li>
             </ul>
         </div>
-        <div class="viajes">
+        <div class="viajes" id="viajes">
             <h3>Paises que quiero Conocer</h3>
             <ul>
                 <li>Estados Unidos</li>
@@ -38,7 +42,7 @@
                 <li>Islas Maldivias</li>
             </ul>
         </div>
-        <div class="contacto">
+        <div class="contacto" id="contacto">
             <h3>Podes Contactarte a travez de:</h3>
             <ul>
                 <li>WhatsApp: 3513549611</li>
@@ -51,17 +55,19 @@
                 <li>O llenado este Formulario <a href="#formulario"></a></li>
             </ul>
         </div>
-        <div class="formContacto">
+        <div class="formContacto" id="formContacto">
             <form action="">
-                 <input type="email" name="email" id="email">
-                 <br>
-                 <input type="text" placeholder="Nombre">
-                 <br>
-                 <textarea name="motivo" id="motivo" cols="30" rows="10" placeholder="Ingrese Comentario"></textarea>
+                <input type="email" name="email" id="email" placeholder="Email">
                 <br>
-                 <input type="submit" value="Contactar">
-                </form>
+                <input type="text" placeholder="Nombre">
+                <br>
+                <textarea name="motivo" id="motivo" cols="30" rows="10" placeholder="Ingrese Comentario"></textarea>
+                <br>
+                <input type="submit" value="Contactar">
+            </form>
         </div>
     </div>
+    </div>
 </body>
+
 </html>
