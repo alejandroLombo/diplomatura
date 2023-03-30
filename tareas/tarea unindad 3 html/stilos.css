@@ -1,3 +1,46 @@
+body{
+    background-image: linear-gradient(to right, black ,#06C0FB );
+}
+
+.conteiner{
+   position: relative;
+   margin: 0 200px;
+   width: 800px;
+   height: 1200px;
+   background-color:#4DACFA;
+   border: 1px solid black;
+   border-radius: 5px;
+  
+}
+#foto{
+  
+    
+  display: flex;
+  justify-content:center;
+    
+}
+
+#datosPersonales{
+    width: 400px;
+    margin-left:15px;
+}
+#hobbies{
+    width: 400px;
+    margin-left:15px;
+}
+#viajes{
+    width: 400px;
+    margin-left:15px;
+}
+#contacto{
+    background-color: aliceblue;
+    width: 310px;
+    margin-top: 30px;
+    margin-left: 25%;
+    
+}
+
+
 h1{
 font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 font-size: 55px;
@@ -9,10 +52,7 @@ h3{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-decoration: underline;
 }
-#curriculum{
-    margin: 20px 30px;
 
-}
 img{
     margin: 10px 10px;
     display:inline;
@@ -20,42 +60,4 @@ img{
     border-radius: 50%;
     width: 350px;
     height: 300px;
-}
-#foto{
-  display: flex;
-  justify-content:right;
-    
-}
- 
-.conteiner{
-    position: relative;
-    margin: 0 200px;
-    width: 800px;
-    height: 1200px;
-    background-color:#4DACFA;
-    border: 1px solid black;
-}
-
-body{
-    background-image: linear-gradient(to right, black ,#06C0FB );
-}
-#datosPersonales{
-
- margin-left:15px;
-}
-#hobbies{
-
-    margin-left:15px;
-}
-#viajes{
-
-    margin-left:15px;
-}
-#contacto{
-
-    margin-left:15px;
-}
-#formContacto{
-
-    margin-left:15px;
 }
