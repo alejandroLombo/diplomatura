@@ -1,5 +1,6 @@
 body{
     background-image: linear-gradient(to right, black ,#06C0FB );
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .conteiner{
@@ -33,6 +34,7 @@ body{
     margin-left:15px;
 }
 #contacto{
+    box-shadow: 15px 15px 20px #888 ;
     background-color: aliceblue;
     width: 310px;
     margin-top: 30px;
