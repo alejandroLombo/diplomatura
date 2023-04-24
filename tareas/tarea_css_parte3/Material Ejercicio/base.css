@@ -36,3 +36,45 @@ aside {
 	float: right;
 	width: 190px;
 }
+
+ @media screen and (max-width:800px) {
+	body {
+		color: #000;
+		background: #332F29;
+		font-size:150%;
+	}
+
+	#contenedor {
+		display: flex;
+		flex-direction: column;
+		width: 800px;
+		background: #8FA68E;
+		margin-right:auto;
+		margin-left:auto; 
+	}
+	nav {
+		background: #FFB447;
+		float: left;
+		width: 100%;
+	}
+	ul {
+		list-style-type:none;
+	}
+	a {
+		color: black;
+		text-decoration: none;
+	}
+	section {
+		background: #F1F2C0;
+		width: 100%;
+		margin-left: 0;
+		height: auto;
+	}
+	aside {
+		background: #CCC59E;
+		width: 100%;
+		height: auto;
+	}
+
+	
+ }
