@@ -1,26 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modulo 3 unidad 3 ejercico1</title>
 </head>
+
 <body>
-    <form method="post" id="calDistancia">
-        <label for="numver">Ingrese Distancia</label>
-        <input type="number" name="distancia" id="distancia">
-        <input type="submit" value="Calcular Distancia">
-    </form>
     <script>
-        const distancia=document.querySelector('calDistancia');
-        function Calcular(e){
-            console.log(distancia.val());
-            e.preventDefault();
+
+        let distancia = window.prompt("Ingrese una distancia");
+        if (distancia >= 0 && distancia <= 1000) {
+            window.alert("Su mejor opcion es ir a Pie");
+
+        }else if(distancia >= 1001 && distancia <= 10000){
+            window.alert("Su mejor opcion es ir en Bicicleta");
+        }else if(distancia >= 10001 && distancia <= 30000){
+            window.alert("Su mejor opcion es ir en Colectivo");
+        }else if(distancia >= 30001 && distancia <= 100000){
+            window.alert("Su mejor opcion es ir en Auto");
+        }else if(distancia > 100000){
+            window.alert("Su mejor opcion es ir en Avion");
         }
+
+
     </script>
 
 
 
 </body>
+
 </html>
