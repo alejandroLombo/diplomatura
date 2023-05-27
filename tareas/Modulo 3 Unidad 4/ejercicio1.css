@@ -1,0 +1,19 @@
+.container{
+    display: flex;
+}
+.cuadrado1{
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    
+}
+.cuadrado2{
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+}
+.cuadrado3{
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+}
