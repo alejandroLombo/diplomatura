@@ -1,12 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modulo 3 Unidad 4 ejercicio 3</title>
 </head>
+
 <body>
-    
+    <script>
+        var alumnos = [
+            {
+
+                nombre: 'Juan Gomez',
+
+                nota: 7
+
+            }, {
+
+                nombre: 'Pedro Rodriguez',
+
+                nota: 4
+
+            }, {
+
+                nombre: 'Roxana García',
+
+                nota: 8
+
+            }, {
+
+                nombre: 'Luciano Lopez',
+
+                nota: 5
+
+            }, {
+
+                nombre: 'Fernanda Gimenez',
+
+                nota: 6
+
+            }, {
+
+                nombre: 'Florencia Martinez',
+
+                nota: 10
+
+            }, {
+
+                nombre: 'Raul Sanchez',
+
+                nota: 7
+
+            }, {
+
+                nombre: 'Sandra Figueroa',
+
+                nota: 8
+
+            }
+
+        ];
+
+        let alumnosAprov = new Array();
+
+        for (let index = 0; index < alumnos.length; index++) {
+                if (alumnos[index]['nota']>= 7) {
+
+                    alumnosAprov.push(alumnos[index]);
+                    
+                };
+            
+        }
+
+
+    console.log(alumnosAprov);
+
+
+    </script>
 </body>
+
 </html>
