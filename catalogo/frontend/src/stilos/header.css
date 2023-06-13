@@ -1,0 +1,100 @@
+body{
+    font-size: 16px;
+    line-height: 20px;
+  }
+  header{
+    background-color: rgb(59, 59, 161);
+    padding: 16px 0;
+  }
+  header h1{
+    color: white;
+    font-size: 40px;
+    font-weight: 100;
+    font-family: italic;
+    display: inline-block;
+    position: relative;
+    bottom: 35px;
+    margin-left: 10px;
+  
+  }
+  
+  nav{
+    background-color: #6da9ed;
+    margin-bottom: 20px;
+  }
+  
+  nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  
+  }
+  
+  nav ul li{
+    flex-grow: 1;
+  }
+  
+  nav ul li a{
+    color: white;
+    text-decoration: none;
+    padding: 3px 6px;
+    display: block;
+    text-align: center;
+  }
+  nav ul li a:hover{
+    background-color: rgba(0,0,0,0.3);
+  }
+  nav ul li a.activo{
+    background-color: rgba(0,0,0,0.3);
+  }
+  footer{
+    background-color: #ccc;
+    clear: both;
+    color:#333;
+    text-align: center;
+    padding: 5px 0;
+    margin-top: 20px;
+  }
+  
+  .holder{
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  
+  h2{
+    color: #2e64a1;
+    font-weight: 400;
+  }
+  
+  .bienvenidos{
+    width: 75%;
+    padding-right: 10px;
+    box-sizing: border-box;
+  }
+  .bienvenidos p{
+    font-size: 20px;
+  }
+  .testimonios{
+    width: 25%;
+  }
+  .testimonio{
+    background-color: #ccc;
+    padding: 16px;
+  }
+  .testimonio .cita{
+    font-weight: bold;
+    font-family: italic;
+    font-size: 22px;
+    display: block;
+  }
+  .testimonio .autor{
+    font-size: 10px;
+    text-align: center;
+    display: block;
+    margin: 12px 0;
+  }
+  .columnas{
+    display: flex;
+    justify-content: space-between;
+  }

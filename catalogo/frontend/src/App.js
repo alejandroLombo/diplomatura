@@ -1,6 +1,10 @@
-//import './App.css';
+import './App.css';
+import './stilos/header.css';
 import Header from "./componentes/layout/Header";
 import Nav from "./componentes/layout/nav";
+import { Footer } from './componentes/layout/footer';
+import { Home } from './paginas/home';
+import { Franco } from './paginas/nosotros';
 
 
 function App() {
@@ -8,6 +12,8 @@ function App() {
     <div className="App">
       <Header/>
       <Nav/>
+      <Home/>
+      <Footer/>
     </div>
   );
 }
