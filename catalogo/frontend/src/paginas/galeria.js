@@ -1,20 +1,20 @@
 import React from 'react';
+const imagenes = require.context('../componentes/img/galeria', true);
 
-function Galeria() {
+export function Galeria() {
     return (
-        <main class="holder">
-            <div class="galeria">
-                <img src="img/galeria/img01.jpg" alt=""></img>
-                    <img src="img/galeria/img02.jpg" alt=""></img>
-                        <img src="img/galeria/img03.jpg" alt=""></img>
-                            <img src="img/galeria/img04.jpg" alt=""></img>
-                                <img src="img/galeria/img05.jpg" alt=""></img>
-                                    <img src="img/galeria/img06.jpg" alt=""></img>
-                                        <img src="img/galeria/img07.jpg" alt=""></img>
+        <main className="holder">
+            <div className="galeria">
+                <img src={imagenes(`./img01.jpg`)} alt=""></img>
+                    <img src={imagenes(`./img02.jpg`)}alt=""></img>
+                        <img src={imagenes(`./img03.jpg`)}alt=""></img>
+                            <img src={imagenes(`./img04.jpg`)}alt=""></img>
+                                <img src={imagenes(`./img05.jpg`)}alt=""></img>
+                                    <img src={imagenes(`./img06.jpg`)}alt=""></img>
+                                        <img src={imagenes(`./img07.jpg`)}alt=""></img>
                                         </div>
 
                                     </main>
                                     );
 }
 
-export default Galeria;

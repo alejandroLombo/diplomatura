@@ -1,42 +1,20 @@
-import {BrowserRouter as Router,Route, NavLink} from "react-router-dom";
-import { Nosotros } from "../../paginas/nosotros";
-import { Home } from "../../paginas/home";
-import Servicios from "../../paginas/servicios";
-import Galeria from "../../paginas/galeria";
+import { NavLink } from "react-router-dom";
+export function Nav() {
+  return (
+    <>
+      <nav className="nav">
+        <div className="holder">
+          <ul>
+            <li><NavLink className={({ isActive }) => (isActive ? "activo" : null)} to="/Home">Home</NavLink></li>
+            <li><NavLink className={({ isActive }) => (isActive ? "activo" : null)} to="/Galeria">Galeria</NavLink></li>
+            <li><NavLink className={({ isActive }) => (isActive ? "activo" : null)} to="/Nosotros">Nosotros</NavLink></li>
+            <li><NavLink className={({ isActive }) => (isActive ? "activo" : null)} to="/servicios">Servicios</NavLink></li>
 
-const Navbar = () => {
-    return (
-       <Router>
-        <Nav/>
-        
-            <Route exact path="/Home" Component={Home}/>
-            <Route exact path="/galeria" Component={Galeria}/>
-            <Route exact path="/servicios" Component={Servicios}/>
-            <Route exact path="/nosortros" Component={Nosotros}/>
-        
-       </Router>
-    )
+          </ul>
+        </div>
+      </nav>
+
+    </>
+  )
+
 }
-
-
-
-const Nav = () => {
-    return (
-        <nav>
-            <div className="holder">
-                <ul>
-                    <li>
-                        <NavLink to="/home" activeClassName="activo">Home</NavLink>
-                        <NavLink to="/galeria" activeClassName="activo">Galeria</NavLink>
-                        <NavLink to="/servicios" activeClassName="activo">Servicios</NavLink>
-                        <NavLink to="/nosotros" activeClassName="activo">Nosotros</NavLink>
-                    </li>
-                </ul>
-            </div>
-
-        </nav>
-
-    )
-}
-
-export default Navbar;

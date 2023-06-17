@@ -1,11 +1,12 @@
 import React from 'react';
+const imagenes = require.context('../componentes/img/servicios', true);
 
-function Servicios() {
+export function Servicios() {
     return (
         <main class="holder">
         <h2>Servicios</h2>
         <div class="servicio">
-            <img src="img/servicios/ferroviario.jpg" alt=""></img>
+            <img src={imagenes(`./ferroviario.jpg`)} alt=""></img>
             <div class="info">
                 <h4>Transporte Ferroviario</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint optio debitis inventore. 
@@ -13,7 +14,7 @@ function Servicios() {
             </div>
         </div>
         <div class="servicio">
-            <img src="img/servicios/aereo.jpg" alt=""></img>
+            <img src={imagenes(`./aereo.jpg`)} alt=""></img>
             <div class="info">
                 <h4>Transporte aereo</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint optio debitis inventore. 
@@ -21,7 +22,7 @@ function Servicios() {
             </div>
         </div>
         <div class="servicio">
-            <img src="img/servicios/terrestre.jpg" alt=""></img>
+            <img src={imagenes(`./terrestre.jpg`)} alt=""></img>
             <div class="info">
                 <h4>Transporte Terrestre</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint optio debitis inventore. 
@@ -29,7 +30,7 @@ function Servicios() {
             </div>
         </div>
         <div class="servicio">
-            <img src="img/servicios/maritimo.jpg" alt=""></img>
+            <img src={imagenes(`./maritimo.jpg`)} alt=""></img>
             <div class="info">
                 <h4>Transporte Maritimo</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint optio debitis inventore. 
@@ -41,4 +42,3 @@ function Servicios() {
     );
 }
 
-export default Servicios;

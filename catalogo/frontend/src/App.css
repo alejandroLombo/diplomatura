@@ -60,7 +60,7 @@ header h1{
 
 }
 
-nav{
+.nav{
   background-color: #6da9ed;
   margin-bottom: 20px;
 }
@@ -77,17 +77,17 @@ nav ul li{
   flex-grow: 1;
 }
 
-nav ul li a{
+a{
   color: white;
   text-decoration: none;
   padding: 3px 6px;
   display: block;
   text-align: center;
 }
-nav ul li a:hover{
+a:hover{
   background-color: rgba(0,0,0,0.3);
 }
-nav ul li a.activo{
+.activo{
   background-color: rgba(0,0,0,0.3);
 }
 footer{
@@ -139,4 +139,93 @@ h2{
 .columnas{
   display: flex;
   justify-content: space-between;
+}
+/* IMAGENES DE GALERIA */
+.galeria{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.galeria img{
+  width: 18%;
+  border: 1px solid #ddd;
+  padding: 0.3em;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+/* NOSOTROS */
+
+.historia p{
+  font-size: 12px;
+
+}
+
+.personas{
+  display: flex;
+  justify-content: space-between;
+}
+
+.persona{
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 18%;
+  text-align: center;
+  padding: 13px;
+  box-sizing: border-box;
+}
+
+.persona img{
+  border-radius: 50%;
+  max-width: 60%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+}
+
+.persona h5, .persona h6{
+  margin: 0;
+  font-weight: normal;
+  color: #2e64a1;
+}
+.persona h5{
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.persona h6{
+  font-size: 14px;
+  font-family: italic;
+}
+
+ /* SERVICIOS */
+
+ .servicio{
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 16px;
+  margin: 16px 0;
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.servicio .info h4{
+  color: #2e64a1;
+  font-weight: 500;
+  font-style: italic;
+  border-bottom: 1px solid #2e64a1;
+  padding-bottom: 10px;
+}
+
+.servicio .info p{
+  font-size: 13px;
+}
+
+.servicio img{
+  border-radius: 15px;
+  display: block;
+  max-width: 225px;
+}
+
+.servicio:nth-child(even){
+  flex-direction: row-reverse;
 }
