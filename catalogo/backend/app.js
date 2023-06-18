@@ -5,7 +5,10 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+//var usersRouter = require('./routes/users');
+var productosRouter = require('./routes/productos');
+var preciosRouter = require('./routes/precios');
+var promocionRouter = require('./routes/promocion');
 
 var app = express();
 
@@ -20,16 +23,21 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+//app.use('/users', usersRouter);
+app.use('/productos', productosRouter);
+app.use('/precio', preciosRouter);
+app.use('/promocion', promocionRouter);
 
-app.get('/prueba',function(req,res){
+
+
+app.get('/productos',function(req,res){
   res.send('Hola soy la pagina de prueba')
 })
-app.get('/destacados',function(req,res){
-  res.send('Hola soy la pagina de destacados')
+app.get('/precios',function(req,res){
+  res.send('Hola soy la pagina de precios')
 })
-app.get('/ingreso',function(req,res){
-  res.send('Hola soy la pagina de ingreso')
+app.get('/promocion',function(req,res){
+  res.send('Hola soy la pagina de promociones')
 })
 
 // catch 404 and forward to error handler
