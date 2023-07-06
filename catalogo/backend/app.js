@@ -11,6 +11,7 @@ var indexRouter = require('./routes/index');
 var productosRouter = require('./routes/productos');
 var preciosRouter = require('./routes/precios');
 var promocionRouter = require('./routes/promocion');
+var loginRouter = require('./routes/admin/login');
 
 var app = express();
 
@@ -36,6 +37,7 @@ app.use('/', indexRouter);
 app.use('/productos', productosRouter);
 app.use('/precio', preciosRouter);
 app.use('/promocion', promocionRouter);
+app.use('/admin/login', loginRouter);
 
 
 
