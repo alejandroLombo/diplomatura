@@ -1,1 +1,13 @@
-<h1>Priximamente sitio de login</h1>
+<h1>{{title}}</h1>
+{{#if conocido}}
+    <p>Hola {{nombre}} <a style="color: black;" href="/salir">Salir</a></p>
+    
+{{/if}}
+ 
+{{#unless conocido}}
+    <p>Hola Logueate para Ingresar</p>
+    <form action="/ingresar" method="post">
+        <input type="text" name="nombre" id="nombre">
+        <button>Ingresar</button>
+    </form>
+{{/unless}}

@@ -31,6 +31,31 @@ app.use(session({
   saveUninitialized:true,
 }));
 
+app.get('/admin/login',function (req,res) {
+
+  var conocido = Boolean(req.session.nombre);
+  
+  res.render('admin/login',{
+    title: 'Sesiones en Express.js',
+    conocido: conocido,
+    nombre: req.session.nombre
+  });
+});
+
+app.post('/ingresar',function (req,res) {
+  if(req.body.nombre){
+    req.session.nombre = req.body.nombre
+  }
+  res.redirect('/admin/login');
+});
+
+app.get('/salir',function (req,res) {
+  req.session.destroy();
+  res.redirect('/');
+  
+});
+
+
 
 app.use('/', indexRouter);
 //app.use('/users', usersRouter);
