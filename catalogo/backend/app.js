@@ -55,22 +55,17 @@ secured = async(req,res,next) =>{
 }
 
 
-app.get('/admin/login',function (req,res) {
+/* app.get('/admin/login',function (req,res) {
 
   var conocido = Boolean(req.session.nombre);
   
   res.render('admin/login',{
-    title: 'Sesiones en Express.js',
     conocido: conocido,
     nombre: req.session.nombre
   });
 });
+ */
 
-app.get('/salir',function (req,res) {
-  req.session.destroy();
-  res.redirect('/');
-  
-});
 
 
 

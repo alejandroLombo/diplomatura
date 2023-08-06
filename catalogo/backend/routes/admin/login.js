@@ -9,6 +9,14 @@ router.get('/', function(req, res, next) {
     layout:'admin/layout'
 });
 });
+router.get('/loguot', function(req, res, next) {
+  req.session.destroy();
+  res.render('admin/login',{
+    layout:'admin/layout'
+});
+});
+
+
 
 router.post('/', async(req, res, next)=> {
   try {
