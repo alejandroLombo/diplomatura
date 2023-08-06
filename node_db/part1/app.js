@@ -30,6 +30,29 @@ app.use('/users', usersRouter);
 conx.query('SELECT * FROM empleados').then(function(resultados){
   console.log(resultados);
 })
+/* var obj={
+  nombre:'Juan',
+  apellido: 'Lopez',
+  trabajo:'docente',
+  edad: 38,
+  salario: 1500,
+  mail: 'juanlopez@gmail.com'
+}
+conx.query('insert into empleados set ?', [obj]).then(function(resultados){
+  console.log(resultados);
+})  */
+/* var id = 24;
+var obj={
+  nombre:'Jose',
+  apellido: 'maidana',
+  trabajo:'Policia',
+  edad: 28,
+  salario: 3500,
+  mail: 'juanlopez@gmail.com'
+}
+conx.query('update empleados set ? where id_emp=? ', [obj,id]).then(function(resultados){
+  console.log(resultados);
+})  */
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
