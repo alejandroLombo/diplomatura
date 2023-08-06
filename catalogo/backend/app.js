@@ -4,6 +4,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+require('dotenv').config();
+var conx = require('./models/db');
 var session = require('express-session');
 
 var indexRouter = require('./routes/index');
@@ -12,6 +14,8 @@ var productosRouter = require('./routes/productos');
 var preciosRouter = require('./routes/precios');
 var promocionRouter = require('./routes/promocion');
 var loginRouter = require('./routes/admin/login');
+var adminRouter = require('./routes/admin/novedades');
+
 
 var app = express();
 
@@ -25,11 +29,31 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+/* //consultas
+conx.query('SELECT * FROM usuarios').then(function(resultados){
+  console.log(resultados);
+}) */
+
 app.use(session({
   secret:'klashjdfgqwur',
+  cookie: {maxAge:null},
   resave:false,
   saveUninitialized:true,
 }));
+
+secured = async(req,res,next) =>{
+  try {
+    console.log(req.session.id_usuario);
+    if(req.session.id_usuario){
+      next();
+    }else{
+      res.redirect('/admin/login');
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 
 app.get('/admin/login',function (req,res) {
 
@@ -40,13 +64,6 @@ app.get('/admin/login',function (req,res) {
     conocido: conocido,
     nombre: req.session.nombre
   });
-});
-
-app.post('/ingresar',function (req,res) {
-  if(req.body.nombre){
-    req.session.nombre = req.body.nombre
-  }
-  res.redirect('/admin/login');
 });
 
 app.get('/salir',function (req,res) {
@@ -63,6 +80,7 @@ app.use('/productos', productosRouter);
 app.use('/precio', preciosRouter);
 app.use('/promocion', promocionRouter);
 app.use('/admin/login', loginRouter);
+app.use('/admin/novedades',secured, adminRouter);
 
 
 
